@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="DAL\" />
-    <Folder Include="Pages\Consulta\" />
   </ItemGroup>
 
   <ItemGroup>

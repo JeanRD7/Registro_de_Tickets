@@ -12,7 +12,10 @@ builder.Services.AddDbContext<Context>(op => op.UseSqlite(ConStr));
 
 builder.Services.AddScoped<TicketBLL>();
 
+builder.Services.AddScoped<DialogService>();
 builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<TooltipService>();
+builder.Services.AddScoped<ContextMenuService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

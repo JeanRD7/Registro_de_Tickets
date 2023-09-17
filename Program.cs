@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Registro_de_Tickets.DAL;
 using Registro_de_Tickets.BLL;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 var ConStr = builder.Configuration.GetConnectionString("ConStr");
@@ -10,6 +11,8 @@ var ConStr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<Context>(op => op.UseSqlite(ConStr));
 
 builder.Services.AddScoped<TicketBLL>();
+
+builder.Services.AddScoped<NotificationService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
